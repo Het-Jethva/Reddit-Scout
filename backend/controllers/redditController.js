@@ -32,6 +32,7 @@ exports.searchPosts = async (req, res) => {
 
     res.json(posts);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: "Error fetching data from Reddit" });
   }
 };
