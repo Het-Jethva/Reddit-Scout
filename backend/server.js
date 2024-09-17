@@ -5,6 +5,8 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const redditRoutes = require('./routes/redditRoutes');
 
+const cors = require('cors');
+
 require('./config/dotenv');
 
 
@@ -27,7 +29,7 @@ app.use(cors({
   }));
 
 
-
+  
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/reddit', redditRoutes);
